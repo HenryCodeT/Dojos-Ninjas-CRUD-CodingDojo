@@ -25,5 +25,10 @@
         ├── dojos.html
         └── ninjas.html
   ```
-  
+  ### Controllers structure ``` controller_dojos_ninjas.py ```
+| routs                         | Funtions                | return                                                                    | methods   |
+|-------------------------------|-------------------------|---------------------------------------------------------------------------|-----------|
+| Localhost:5000/dojos          | index()                 | render_template("index.html",dojos=dojos),redirect("/dojos")              | GET, POST |
+| Localhost:5000/ninjas         | ninjas()                | render_template("ninjas.html",dojos=dojos),return redirect('/dojos')      | GET, POST |
+| Localhost:5000/dojos/<number> | all_ninjas_dojo(number) | render_template("dojos.html", ninjas=response_query, dojo_name=dojo_name) | GET       |
         
